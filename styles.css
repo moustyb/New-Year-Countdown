@@ -1,0 +1,79 @@
+:root {
+  --bg: #0f1120;
+  --surface: #1a1d36;
+  --border: #2a2f54;
+  --text: #e8eaf6;
+  --muted: #9aa0b4;
+  --accent: #7c83fd;
+  --font: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background: radial-gradient(1200px circle at 50% 0%, #12142a 0%, var(--bg) 60%);
+  color: var(--text);
+  font-family: var(--font);
+}
+
+main {
+  width: min(960px, 92vw);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+  margin-bottom: 0.75rem;
+}
+
+.year {
+  margin: 0 auto 1.25rem;
+  padding: 0.4rem 0.8rem;
+  width: fit-content;
+  border-radius: 999px;
+  background: rgba(124, 131, 253, 0.12);
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem auto 0.75rem;
+}
+
+.unit {
+  padding: 1rem 0.75rem;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.unit span {
+  display: block;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.unit label {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--
